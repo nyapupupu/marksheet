@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>マークシート｜問題数と選択肢を選ぶだけの無料マークシートアプリ</title>
-<meta name="description" content="問題数と選択肢数を選ぶだけですぐ使える無料のマークシートアプリ。共通テスト数学のような「アイウ」形式の結合、− ± などの記号、丸つけ、復習マーク、解き直しに対応。登録不要でスマホでも使えます。">
+<title>マークシート｜ブラウザで使える無料のマークシート・丸つけアプリ</title>
+<meta name="description" content="インストール不要・登録不要の無料マークシート。問題数と選択肢を選ぶだけで解答用紙ができ、丸つけ・復習マーク・解き直し・タイマーに対応。共通テスト数学の「アイウ」形式や − ± にも対応し、TOEICや宅建、法学検定などの過去問演習に使えます。">
+<link rel="canonical" href="https://nyapupupu.github.io/marksheet/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="マークシート">
+<meta property="og:url" content="https://nyapupupu.github.io/marksheet/">
+<meta property="og:title" content="マークシート｜ブラウザで使える無料のマークシート">
 <meta property="og:description" content="問題数と選択肢を選ぶだけですぐ使えるマークシート。丸つけ・復習マーク・共通テスト型の欄の結合に対応。">
 <meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"マークシート","url":"https://nyapupupu.github.io/marksheet/","applicationCategory":"EducationalApplication","operatingSystem":"All","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"description":"ブラウザで使える無料のマークシート。丸つけ、復習マーク、解き直し、タイマー、共通テスト数学型の欄の結合に対応。"}</script>
 <style>
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 body{margin:0}
@@ -60,6 +63,7 @@ h1,h2,h3{text-wrap:balance;margin:0;font-weight:700}
 .brand i{display:inline-block;width:12px;height:18px;border:2px solid var(--ink);border-radius:50%}
 .brand i:nth-of-type(2){background:var(--graphite);border-color:var(--graphite)}
 .brand span{margin-left:4px}
+h1.brand{font-size:20px;font-weight:700}
 .ghost{background:none;border:1.5px solid var(--line-strong);border-radius:6px;padding:6px 12px;font-size:14px}
 .ghost:hover{border-color:var(--ink);color:var(--ink)}
 
@@ -108,6 +112,19 @@ h1,h2,h3{text-wrap:balance;margin:0;font-weight:700}
 .item .del:hover{color:var(--pen)}
 .badge{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--line-strong);color:var(--muted);border-radius:3px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .empty{color:var(--muted);font-size:14px;padding:14px 0;margin:0}
+
+/* about */
+.about{margin-top:56px;padding-top:28px;border-top:2px solid var(--ink);max-width:760px;display:grid;gap:28px}
+.about h2{font-size:20px;color:var(--ink);letter-spacing:.04em}
+.about h3{font-size:16px;margin-bottom:10px;letter-spacing:.04em}
+.about p{margin:0;max-width:65ch}
+.about ul,.about ol{margin:0;padding-left:1.4em;display:grid;gap:6px}
+.about li b{color:var(--ink)}
+.about dl{margin:0;display:grid;gap:14px}
+.about dt{font-weight:700}
+.about dt::before{content:"Q. ";color:var(--ink);font-family:var(--mono)}
+.about dd{margin:4px 0 0;color:var(--muted);max-width:65ch}
+.about dd::before{content:"A. ";color:var(--pen);font-family:var(--mono)}
 
 /* sheet */
 .sheethead{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin-bottom:6px}
@@ -210,7 +227,7 @@ h1,h2,h3{text-wrap:balance;margin:0;font-weight:700}
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand" aria-label="マークシート"><i></i><i></i><span>マークシート</span></div>
+    <h1 class="brand"><i aria-hidden="true"></i><i aria-hidden="true"></i><span>マークシート</span></h1>
     <button id="back" class="ghost" hidden>← シート一覧</button>
   </header>
 
@@ -300,6 +317,40 @@ h1,h2,h3{text-wrap:balance;margin:0;font-weight:700}
     <div class="addrows" id="addrows">
       <button class="small" type="button" data-addrows="1">＋ 欄を1つ追加</button>
       <button class="small" type="button" data-addrows="5">＋ 5つ追加</button>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <h2>ブラウザで使える無料のマークシート</h2>
+      <p style="margin-top:10px">インストールも会員登録も不要で、問題数と選択肢の数を選ぶだけで解答用紙ができます。TOEIC L&amp;R や英検、共通テストの過去問から、宅建、公務員試験、法学検定、危険物取扱者、世界遺産検定、色彩検定まで、選択式の問題集や過去問を解くときの自習・テスト演習に使えます。スマホでもパソコンでも使えます。</p>
+    </div>
+    <div>
+      <h3>できること</h3>
+      <ul>
+        <li><b>丸つけ</b>：あとから正解をまとめて入力するだけで、○×と正答率を表示します。</li>
+        <li><b>復習マーク</b>：解きながら、あとで見直したい問題に付箋を付けられます。</li>
+        <li><b>解き直し</b>：誤答と復習マークの問題だけを空欄にしたシートを作れます。</li>
+        <li><b>共通テスト数学型</b>：「アイウ」のように複数の欄をまとめて1問として採点できます。− や ± などの記号にも対応しています。</li>
+        <li><b>テスト演習タイマー</b>：解答にかかった時間を計測できます。</li>
+      </ul>
+    </div>
+    <div>
+      <h3>使い方</h3>
+      <ol>
+        <li>問題数、選択肢の数、表記を選んで解答用紙を作ります。</li>
+        <li>問題集や過去問を解きながらマークします。</li>
+        <li>「丸つけ」タブで正解を入力すると、すぐに採点されます。</li>
+      </ol>
+    </div>
+    <div>
+      <h3>よくある質問</h3>
+      <dl>
+        <div><dt>無料で使えますか？</dt><dd>無料で、登録もいりません。</dd></div>
+        <div><dt>データはどこに保存されますか？</dt><dd>お使いのブラウザの中だけに保存され、サーバーには送られません。そのため別の端末やシークレットウィンドウには引き継がれず、ブラウザのデータを消すとシートも消えます。</dd></div>
+        <div><dt>共通テストの自己採点に使えますか？</dt><dd>使えます。ひな形の「共通テスト数学型」を選ぶと、ア・イ・ウの欄に − ± 0〜9 をマークでき、正解は「-32125」のようにまとめて入力できます。</dd></div>
+        <div><dt>3択と4択が混ざった試験はどうすればいいですか？</dt><dd>多いほうの選択肢数で作り、選択肢が少ない問題では余った選択肢を使わなければ採点できます。たとえば TOEIC L&amp;R なら200欄・4択で作り、Part 2 では D を使いません。</dd></div>
+      </dl>
     </div>
   </section>
 </div>
@@ -560,12 +611,12 @@ let G=[];
 function openSheet(id){
   pauseTimer(); curId=id; curRow=0;
   const s=cur(); if(!s) return;
-  $('#home').hidden=true; $('#sheet').hidden=false; $('#back').hidden=false;
+  $('#home').hidden=true; $('#sheet').hidden=false; $('#back').hidden=false; if($('#about')) $('#about').hidden=true;
   $('#s-title').value=s.title;
   $('#editor').hidden=true; $('#edit-btn').setAttribute('aria-expanded','false');
   renderSheet(); window.scrollTo(0,0);
 }
-function goHome(){ pauseTimer(); curId=null; $('#sheet').hidden=true; $('#home').hidden=false; $('#back').hidden=true; renderList(); window.scrollTo(0,0); }
+function goHome(){ pauseTimer(); curId=null; $('#sheet').hidden=true; $('#home').hidden=false; $('#back').hidden=true; if($('#about')) $('#about').hidden=false; renderList(); window.scrollTo(0,0); }
 $('#back').onclick=goHome;
 $('#s-title').addEventListener('input',e=>{ const s=cur(); s.title=e.target.value.trim()||'無題のシート'; save(); });
 
